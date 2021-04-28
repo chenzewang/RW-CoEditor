@@ -17,7 +17,7 @@ const cards = [
 ];
 
 const isDev = process.env.NODE_ENV !== 'production';
-const domain = isDev ? 'http://localhost:7001' : 'https://editor.aomao.com';
+const domain = isDev ? 'localhost:7001' : 'riwang.love:7001';
 
 const EngineDemo = () => {
 	const ref = useRef<HTMLDivElement | null>(null);
@@ -52,7 +52,7 @@ const EngineDemo = () => {
 		//实例化协作编辑客户端
 		const otClient = new OTClient(engine);
 		//连接到协作服务端，demo文档
-		const ws = 'ws://127.0.0.1:7001';
+		const ws = `ws://${domain}`;
 		otClient.connect(
 			`${ws}${currentMember ? '?uid=' + currentMember.id : ''}`,
 			'demo',
