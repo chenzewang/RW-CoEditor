@@ -17,7 +17,7 @@ const cards = [
 ];
 
 const isDev = process.env.NODE_ENV !== 'production';
-const domain = isDev ? 'localhost:7001' : 'riwang.love:7001';
+const domain = isDev ? 'localhost:7001' : 'www.riwang.love:7001';
 
 const EngineDemo = () => {
 	const ref = useRef<HTMLDivElement | null>(null);
